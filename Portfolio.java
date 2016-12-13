@@ -7,7 +7,7 @@ public class Portfolio{
 	
 
 	private String ownerName;
-	private String email;  
+	private String email;
 	private int phoneNumber;
 	private int accountNumber;
 	private int registerValue;
@@ -61,7 +61,15 @@ public class Portfolio{
 	}
 
 	public void displayStock(Stock stock){
-		System.out.println("The full name is: " + stock.getName());
+	    System.out.println(    stock.getName());
+	    System.out.println(      stock.getPrice());
+	    System.out.println(    stock.getPe());
+	    System.out.println(    stock.getEps());
+	    System.out.println(   stock.getWeek52low());
+	    System.out.println(   stock.getWeek52high());
+	    System.out.println(    stock.getOpen());
+	   
+		/* System.out.println("The full name is: " + stock.getName());
 		System.out.println("Price: " + stock.getPrice());
 		System.out.println("Volume: " + stock.getVolume()); 
 		System.out.println("P/E: " + stock.getPe());
@@ -75,8 +83,8 @@ public class Portfolio{
 		System.out.println("The currency is: " + stock.getCurrency());
 		System.out.println("The short ratio is: " + stock.getShortRatio());
 		System.out.println("The previous close was: " + stock.getPreviousClose());
-		System.out.println("The open for today was: " + stock.getOpen());
-		System.out.println("The exchange is " + stock.getExchange());
+		System.out.println("The open for today was: " + stock.getWeek52high());
+		System.out.println("The exchange is " + stock.getExchange()); */
 	}
 
 	public void displayAllStocks(){
@@ -85,6 +93,7 @@ public class Portfolio{
 			System.out.println("No stocks in the list");
 		}
 		else{
+			GUIHelper.displayTableIndex();
 			for(int i = 0; i < stocksList.size(); i++){
 			Stock temp = stocksList.get(i);
 			displayStock(temp);
