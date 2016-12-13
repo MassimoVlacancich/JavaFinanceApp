@@ -7,7 +7,7 @@ public class Portfolio{
 	
 
 	private String ownerName;
-	private String email;
+	private String email;  
 	private int phoneNumber;
 	private int accountNumber;
 	private int registerValue;
