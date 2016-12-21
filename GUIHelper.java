@@ -26,5 +26,5 @@ public class GUIHelper{
 
 	static void displayTableIndex(){
 		System.out.println("      NAME      PRICE    PE    EPS   52wL    52w H     dayOpen  ");
-	}
+	}  
 }
