@@ -33,6 +33,8 @@ public class Portfolio{
 		System.out.println("phone: " + phoneNumber);
 		System.out.println("account " + accountNumber);
 		System.out.println("account n " + registerValue);
+		System.out.println("");
+		displayAllStocks();
 	}
 
 	public void addTransaction(Transaction trans){
@@ -42,6 +44,7 @@ public class Portfolio{
 	public void addStock(String symbol){
 		Stock stock = StockFetcher.getStock(symbol);
 		stocksList.add(stock);
+		System.out.println("Stick addedd successfully");
 	}
 
 	public void displayAllTransactions(){
@@ -61,13 +64,13 @@ public class Portfolio{
 	}
 
 	public void displayStock(Stock stock){
-	    System.out.println(    stock.getName());
-	    System.out.println(      stock.getPrice());
-	    System.out.println(    stock.getPe());
-	    System.out.println(    stock.getEps());
-	    System.out.println(   stock.getWeek52low());
-	    System.out.println(   stock.getWeek52high());
-	    System.out.println(    stock.getOpen());
+	    System.out.print(stock.getName());
+	    System.out.print("     " + stock.getPrice());
+	    System.out.print("     " + stock.getPe());
+	    System.out.print("     " + stock.getEps());
+	    System.out.print("     " + stock.getWeek52low());
+	    System.out.print("     " + stock.getWeek52high());
+	    System.out.println("     " + stock.getOpen());
 	   
 		/* System.out.println("The full name is: " + stock.getName());
 		System.out.println("Price: " + stock.getPrice());
@@ -97,8 +100,6 @@ public class Portfolio{
 			for(int i = 0; i < stocksList.size(); i++){
 			Stock temp = stocksList.get(i);
 			displayStock(temp);
-			System.out.println("");
-			System.out.println("");
 			}
 		}
 	}
